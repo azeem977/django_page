@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+{% load static %}
+
+
+{% block content %}
+ <h3>Test page</h3>
+ <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ex, ipsum aut facilis incidunt recusandae quam quisquam tempora dignissimos veritatis nobis, assumenda neque veniam iste harum. Quasi fugiat blanditiis dolores!</p>
+
+ <a href="{% url "home" %}">home</a>
+
+
+{% for fruit in fruits %}
+ 
+<div class="item">
+
+    <img src="{{fruit.image.url}}" alt="{{ fruit.name }}">
+</div>
+
+{% endfor %}
+
+{% endblock content %}
+ 
